@@ -23,7 +23,7 @@
     "eslint-config-egg": "^7.1.0"
   },
   "engines": {
-    "node": ">=10.19.0"
+    "node": "10.19.0"
   },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-healthcare_survey",
