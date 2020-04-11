@@ -53,17 +53,23 @@
 
 
     <script>
-        $.ajax({
-            type: "GET", //傳送方式
-            url: "/question/common", //傳送目的地
-            success: function(common) {
-                console.log("common")
-                console.log(common)
-            },
-            error: function(jqXHR) {
-                console.log("Unknown error common question!")
-            }
-        }) 
+        $(window).load(function () {
+            $.ajax({
+                type: "GET", //傳送方式
+                url: "/question/common", //傳送目的地
+                success: function(common) {
+                    console.log("common")
+                    console.log(common)
+                },
+                error: function(jqXHR) {
+                    console.log("Unknown error common question!")
+                }
+            }) 
+        }
+
+
+
+
     </script>
 
 

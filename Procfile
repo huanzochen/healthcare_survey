@@ -1,1 +1,1 @@
-web: yarn startd
+web: npm run startd
