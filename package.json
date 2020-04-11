@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-healthcare_survey",
+    "startd": "egg-scripts start --title=egg-server-healthcare_survey",
     "stop": "egg-scripts stop --title=egg-server-healthcare_survey",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
