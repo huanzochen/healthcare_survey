@@ -45,28 +45,105 @@
 
 <body>
 <div>
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-    domain in literature without prior coordination or asking for permission.</p>
-    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+    <h1 id="content"></h1>
+    <h3 id="detail"></h3>
+    <button id="A" onclick="next('A')">  </button>
+    <button id="B" onclick="next('B')">  </button>
+    <button id="C" onclick="next('C')">  </button>
+    <button id="D" onclick="next('D')">  </button>
+</div>
+
+<div>
+    <h1 id="report"></h1>
+</div>
+
 
 
 
     <script>
-        $(window).load(function () {
+        var basicQ = {};
+        var common = {};
+        // init.then( () => {
+        //     $("#content").append()
+
+
+            console.log("this is basic")
+            console.log(basicQ)
+        // })
+
+        $(document).ready( function () {
             $.ajax({
                 type: "GET", //傳送方式
-                url: "/question/common", //傳送目的地
-                success: function(common) {
-                    console.log("common")
-                    console.log(common)
+                url: "/question/basic", //傳送目的地
+                success: function(basic) {
+                    console.log("basic")
+                    console.log(basic)
+                    basicQ = basic;
+
+                    $("#content").text(basicQ[0].content);
+                    $("#A").text(basicQ[0].description.A);
+                    $("#B").text(basicQ[0].description.B);
+                    $("#C").hide();
+                    $("#D").hide();
                 },
                 error: function(jqXHR) {
-                    console.log("Unknown error common question!")
+                    console.log("Unknown error basic question!")
                 }
-            }) 
+            });
+        });
+
+        function next( options ) {
+            $("#report").text(
+                "用戶的資料" +
+                $("#" + options ).text()
+            )
+            
+
+
+
         }
 
+
+        
+        
+        
+        
+        
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $.ajax({
+            type: "GET", //傳送方式
+            url: "/question/common", //傳送目的地
+            success: function(common) {
+                console.log("common")
+                console.log(common)
+            },
+            error: function(jqXHR) {
+                console.log("Unknown error common question!")
+            }
+        });
 
 
 
@@ -79,7 +156,7 @@
 
 
 
-</div>
+
 
 
 

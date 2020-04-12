@@ -1,4 +1,116 @@
 const question = {
+    basic:[
+        {
+            id: '1',
+            detail: '',
+            content: '性別?',
+            feedback: {
+                A: 'A',
+                B: 'B'
+            },
+            description: {
+                A: '男',
+                B: '女'
+            },
+            age_group: {
+                baby:true,
+                pedo:true,
+                child:true,
+                young:true,
+                adult:true,
+                old:true
+            },
+            gender: {
+                male:true,
+                female:true
+            }
+        },
+        {
+            id: '2',
+            detail: '',
+            content: '腰圍 (男)',
+            feedback: {
+                A: 'A',
+                B: 'B'
+            },
+            description: {
+                A: '> 90公分',
+                B: '< 90公分'
+            },
+            age_group: {
+                baby:true,
+                pedo:true,
+                child:true,
+                young:true,
+                adult:true,
+                old:true
+            },
+            gender: {
+                male:true,
+                female:false
+            }
+        },
+        {
+            id: '3',
+            detail: 'BMI = 體重(公斤) / 身高²(公尺)。 例如：一個52公斤的人，身高是155公分，則BMI為: 52(公斤)/1.55² ( 公尺 )= 21.6',
+            content: 'BMI',
+            feedback: {
+                A: 'A',
+                B: 'B',
+                C: 'C'
+            },
+            description: {
+                A: '過輕（BMI＞18.5）',
+                B: '正常（18.5 ≦ BMI ＜ 23.9）',
+                C: '過重或肥胖（BMI ≧ 24）'
+            },
+            age_group: {
+                baby:true,
+                pedo:true,
+                child:true,
+                young:true,
+                adult:true,
+                old:true
+            },
+            gender: {
+                male:true,
+                female:false
+            }
+        },
+        {
+            id: '4',
+            detail: '',
+            content: '年齡',
+            feedback: {
+                A: 'A',
+                B: 'B',
+                C: 'C',
+                D: 'D',
+                E: 'E',
+                F: 'F'
+            },
+            description: {
+                A: '１歲以下',
+                B: '１歲以上，３歲以下',
+                C: '４歲以上，１２歲以下',
+                D: '１３歲以上，３０歲以下',
+                E: '３１歲以上，４０歲以下',
+                F: '４０歲以上'
+            },
+            age_group: {
+                baby:true,
+                pedo:true,
+                child:true,
+                young:true,
+                adult:true,
+                old:true
+            },
+            gender: {
+                male:true,
+                female:false
+            }
+        },
+    ],
     common:[
         {
             id: '1',
@@ -193,6 +305,11 @@ const question = {
             }
         }
     ]
+
+
+
+
+
 };
 
 exports = module.exports = { question };
